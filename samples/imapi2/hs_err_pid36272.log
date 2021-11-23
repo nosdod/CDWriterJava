@@ -1,0 +1,262 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000055dd8f50, pid=36272, tid=0x000000000000832c
+#
+# JRE version: OpenJDK Runtime Environment (8.0_312-b07) (build 1.8.0_312-b07)
+# Java VM: OpenJDK 64-Bit Server VM (25.312-b07 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x138f50]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000028ffda9b800):  JavaThread "main" [_thread_in_vm, id=33580, stack(0x000000bacf700000,0x000000bacf800000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000000
+
+Registers:
+RAX=0x0000028f9ad7ad00, RBX=0x0000000000000000, RCX=0x0000000000010013, RDX=0x0000028f9ad7ad00
+RSP=0x000000bacf7fdeb0, RBP=0x0000000180035208, RSI=0x0000028f9ad7ad00, RDI=0x0000028f9ad77c10
+R8 =0x0000000000000013, R9 =0xfffffd71e52ba518, R10=0x0000028ffda9ba50, R11=0x0000028f9ad63748
+R12=0x000000bacf7fe6b8, R13=0x000000bacf7fe6c0, R14=0x0000000000000000, R15=0x0000028ffda9b800
+RIP=0x0000000055dd8f50, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x000000bacf7fdeb0)
+0x000000bacf7fdeb0:   0000000000000013 0000000180035218
+0x000000bacf7fdec0:   0000028ffdaf4f90 0000028f9ad66190
+0x000000bacf7fded0:   0000028ffda9ba50 0000000055ee9035
+0x000000bacf7fdee0:   000000baad2a4544 00000001800352a0
+0x000000bacf7fdef0:   0000000000000000 0000028ffda9ba50
+0x000000bacf7fdf00:   0000000180035218 0000000055dc6075
+0x000000bacf7fdf10:   0000028ffda9b800 0000000180035208
+0x000000bacf7fdf20:   00000007b5c89678 00000000562794b0
+0x000000bacf7fdf30:   000000018002f201 0000028ffda9b800
+0x000000bacf7fdf40:   0000028ffda9b800 0000028ffda99e18
+0x000000bacf7fdf50:   00000000000003c4 00000000562794b0
+0x000000bacf7fdf60:   000000018002f280 00000001800093e8
+0x000000bacf7fdf70:   0000000180047720 0000028f9ad5a7e0
+0x000000bacf7fdf80:   0000000040000000 0000000180000000
+0x000000bacf7fdf90:   0000028ffda9ba50 000000018000172b
+0x000000bacf7fdfa0:   0000000180047810 0000028ffda9ba50 
+
+Instructions: (pc=0x0000000055dd8f50)
+0x0000000055dd8f30:   fa 00 00 00 48 85 c0 0f 84 f1 00 00 00 41 0f b6
+0x0000000055dd8f40:   de 80 e3 01 74 0a 49 8b ce e8 42 b3 0a 00 eb 03
+0x0000000055dd8f50:   49 8b 06 48 8b c8 e8 a5 4f f1 ff 84 c0 74 0b 41
+0x0000000055dd8f60:   b8 36 06 00 00 e9 ca 00 00 00 84 db 74 0a 49 8b 
+
+
+Register to memory mapping:
+
+RAX=0x0000028f9ad7ad00 is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x0000000000010013 is an unknown value
+RDX=0x0000028f9ad7ad00 is an unknown value
+RSP=0x000000bacf7fdeb0 is pointing into the stack for thread: 0x0000028ffda9b800
+RBP=0x0000000180035208 is an unknown value
+RSI=0x0000028f9ad7ad00 is an unknown value
+RDI=0x0000028f9ad77c10 is an unknown value
+R8 =0x0000000000000013 is an unknown value
+R9 =0xfffffd71e52ba518 is an unknown value
+R10=0x0000028ffda9ba50 is an unknown value
+R11=0x0000028f9ad63748 is an unknown value
+R12=0x000000bacf7fe6b8 is pointing into the stack for thread: 0x0000028ffda9b800
+R13=0x000000bacf7fe6c0 is pointing into the stack for thread: 0x0000028ffda9b800
+R14=0x0000000000000000 is an unknown value
+R15=0x0000028ffda9b800 is a thread
+
+
+Stack: [0x000000bacf700000,0x000000bacf800000],  sp=0x000000bacf7fdeb0,  free space=1015k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x138f50]
+V  [jvm.dll+0x126075]
+C  [com4j-amd64.dll+0x93e8]
+C  [com4j-amd64.dll+0x172b]
+C  [com4j-amd64.dll+0x2f25d]
+C  [com4j-amd64.dll+0x2f2ba]
+C  [java.dll+0x1688]
+C  0x0000028f80019c8e
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.ClassLoader$NativeLibrary.load(Ljava/lang/String;Z)V+0
+j  java.lang.ClassLoader.loadLibrary0(Ljava/lang/Class;Ljava/io/File;)Z+328
+j  java.lang.ClassLoader.loadLibrary(Ljava/lang/Class;Ljava/lang/String;Z)V+48
+j  java.lang.Runtime.load0(Ljava/lang/Class;Ljava/lang/String;)V+57
+j  java.lang.System.load(Ljava/lang/String;)V+7
+j  com4j.COM4J.loadNativeLibrary()V+310
+j  com4j.COM4J.<clinit>()V+124
+v  ~StubRoutines::call_stub
+j  imapi2.ClassFactory.createMsftDiscMaster2()Limapi2/IDiscMaster2;+4
+j  imapi2.Main.main([Ljava/lang/String;)V+8
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000028f9acf8000 JavaThread "Service Thread" daemon [_thread_blocked, id=44068, stack(0x000000bad0b00000,0x000000bad0c00000)]
+  0x0000028f994df000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=35108, stack(0x000000bad0a00000,0x000000bad0b00000)]
+  0x0000028f994d2800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=28132, stack(0x000000bad0900000,0x000000bad0a00000)]
+  0x0000028f994d0000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=18416, stack(0x000000bad0800000,0x000000bad0900000)]
+  0x0000028f994d6000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=46972, stack(0x000000bad0700000,0x000000bad0800000)]
+  0x0000028f994c7000 JavaThread "Attach Listener" daemon [_thread_blocked, id=41168, stack(0x000000bad0600000,0x000000bad0700000)]
+  0x0000028f994c5000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=19980, stack(0x000000bad0500000,0x000000bad0600000)]
+  0x0000028f99499800 JavaThread "Finalizer" daemon [_thread_blocked, id=47172, stack(0x000000bad0400000,0x000000bad0500000)]
+  0x0000028f9948e000 JavaThread "Reference Handler" daemon [_thread_blocked, id=18616, stack(0x000000bad0300000,0x000000bad0400000)]
+=>0x0000028ffda9b800 JavaThread "main" [_thread_in_vm, id=33580, stack(0x000000bacf700000,0x000000bacf800000)]
+
+Other Threads:
+  0x0000028f99465000 VMThread [stack: 0x000000bad0200000,0x000000bad0300000] [id=13996]
+  0x0000028f994fe800 WatcherThread [stack: 0x000000bad0c00000,0x000000bad0d00000] [id=33488]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c3400000, size: 4044 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 75776K, used 2600K [0x000000076bc00000, 0x0000000771080000, 0x00000007c0000000)
+  eden space 65024K, 4% used [0x000000076bc00000,0x000000076be8a3f8,0x000000076fb80000)
+  from space 10752K, 0% used [0x0000000770600000,0x0000000770600000,0x0000000771080000)
+  to   space 10752K, 0% used [0x000000076fb80000,0x000000076fb80000,0x0000000770600000)
+ ParOldGen       total 173568K, used 0K [0x00000006c3400000, 0x00000006cdd80000, 0x000000076bc00000)
+  object space 173568K, 0% used [0x00000006c3400000,0x00000006c3400000,0x00000006cdd80000)
+ Metaspace       used 3620K, capacity 4664K, committed 4864K, reserved 1056768K
+  class space    used 381K, capacity 424K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x0000028f8f000000,0x0000028f8f7f0000] byte_map_base: 0x0000028f8b9e6000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005648c860
+ Begin Bits: [0x0000028f8f7f0000, 0x0000028f93720000)
+ End Bits:   [0x0000028f93720000, 0x0000028f97650000)
+
+Polling page: 0x0000028ffdbd0000
+
+CodeCache: size=245760Kb used=1226Kb max_used=1238Kb free=244533Kb
+ bounds [0x0000028f80000000, 0x0000028f80270000, 0x0000028f8f000000]
+ total_blobs=355 nmethods=76 adapters=192
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.166 Thread 0x0000028f994df000 nmethod 72 0x0000028f8012f2d0 code [0x0000028f8012f420, 0x0000028f8012f578]
+Event: 0.166 Thread 0x0000028f994df000   70       3       java.lang.String::<init> (10 bytes)
+Event: 0.166 Thread 0x0000028f994df000 nmethod 70 0x0000028f8012ef10 code [0x0000028f8012f060, 0x0000028f8012f238]
+Event: 0.166 Thread 0x0000028f994df000   73       3       java.lang.ClassLoader::checkName (43 bytes)
+Event: 0.167 Thread 0x0000028f994df000 nmethod 73 0x0000028f80131990 code [0x0000028f80131b40, 0x0000028f801322c0]
+Event: 0.167 Thread 0x0000028f994df000   74       3       sun.misc.VM::allowArraySyntax (4 bytes)
+Event: 0.167 Thread 0x0000028f994df000 nmethod 74 0x0000028f8012ea10 code [0x0000028f8012eb60, 0x0000028f8012ecb8]
+Event: 0.168 Thread 0x0000028f994d6000   75       4       java.lang.String::hashCode (55 bytes)
+Event: 0.168 Thread 0x0000028f994df000   76       3       java.lang.AbstractStringBuilder::newCapacity (39 bytes)
+Event: 0.168 Thread 0x0000028f994df000 nmethod 76 0x0000028f80132550 code [0x0000028f801326e0, 0x0000028f80132ad0]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.034 Thread 0x0000028ffda9b800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076bc07cc0) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jni.cpp
+Event: 0.034 Thread 0x0000028ffda9b800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076bc07fa8) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jni.cpp, line 4014]
+Event: 0.112 Thread 0x0000028ffda9b800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bc89fd8) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 0.112 Thread 0x0000028ffda9b800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bc8a1e8) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 0.148 Thread 0x0000028ffda9b800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcd75a8) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 0.148 Thread 0x0000028ffda9b800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcd77b8) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 0.149 Thread 0x0000028ffda9b800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcda808) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 0.149 Thread 0x0000028ffda9b800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcdaa18) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 0.167 Thread 0x0000028ffda9b800 Exception <a 'java/lang/NoSuchMethodError': java.nio.ByteBuffer.position(I)Ljava/nio/ByteBuffer;> (0x000000076bd2fb00) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 620]
+Event: 0.167 Thread 0x0000028ffda9b800 Exception <a 'java/lang/NoSuchMethodError'> (0x000000076bd2fb00) thrown at [E:\jenkins\tmp\workspace\build\src\hotspot\src\share\vm\oops\instanceKlass.cpp, line 964]
+
+Events (10 events):
+Event: 0.166 loading class java/util/concurrent/Callable
+Event: 0.166 loading class java/util/concurrent/Callable done
+Event: 0.166 loading class com4j/Variant$1
+Event: 0.166 loading class com4j/Variant$1 done
+Event: 0.166 loading class java/nio/DirectByteBuffer$Deallocator
+Event: 0.166 loading class java/nio/DirectByteBuffer$Deallocator done
+Event: 0.167 loading class com4j/Holder
+Event: 0.167 loading class com4j/Holder done
+Event: 0.168 loading class java/io/StringWriter
+Event: 0.168 loading class java/io/StringWriter done
+
+
+Dynamic libraries:
+0x00007ff641220000 - 0x00007ff64125a000 	C:\Users\markd\.jdks\temurin-1.8.0_312\jre\bin\java.exe
+0x00007ffcf3cf0000 - 0x00007ffcf3ee5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffcf2db0000 - 0x00007ffcf2e6e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffcf1650000 - 0x00007ffcf1918000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffcf2e70000 - 0x00007ffcf2f1c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffcf2d10000 - 0x00007ffcf2dae000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffcf2830000 - 0x00007ffcf28cb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffcf3b80000 - 0x00007ffcf3caa000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffcf37b0000 - 0x00007ffcf3951000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffcf1a30000 - 0x00007ffcf1a52000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffcf2230000 - 0x00007ffcf225b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffcf1410000 - 0x00007ffcf151b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffcf15b0000 - 0x00007ffcf164d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffcf1bc0000 - 0x00007ffcf1cc0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffcdcca0000 - 0x00007ffcdcf3a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffcf3780000 - 0x00007ffcf37b0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc64030000 - 0x00007ffc6411f000 	C:\Users\markd\.jdks\temurin-1.8.0_312\jre\bin\msvcr120.dll
+0x00007ffc7ea70000 - 0x00007ffc7eb16000 	C:\Users\markd\.jdks\temurin-1.8.0_312\jre\bin\msvcp120.dll
+0x0000000055ca0000 - 0x000000005650b000 	C:\Users\markd\.jdks\temurin-1.8.0_312\jre\bin\server\jvm.dll
+0x00007ffcf2620000 - 0x00007ffcf2628000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffcd1330000 - 0x00007ffcd1339000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffcf27c0000 - 0x00007ffcf282b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffce8b70000 - 0x00007ffce8b97000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffce7e30000 - 0x00007ffce7e3a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffceb0a0000 - 0x00007ffceb0af000 	C:\Users\markd\.jdks\temurin-1.8.0_312\jre\bin\verify.dll
+0x00007ffcb3d00000 - 0x00007ffcb3d29000 	C:\Users\markd\.jdks\temurin-1.8.0_312\jre\bin\java.dll
+0x00007ffcc9970000 - 0x00007ffcc9986000 	C:\Users\markd\.jdks\temurin-1.8.0_312\jre\bin\zip.dll
+0x00007ffcf3040000 - 0x00007ffcf377f000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffceeda0000 - 0x00007ffcef530000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ffcf2260000 - 0x00007ffcf25b5000 	C:\WINDOWS\System32\combase.dll
+0x00007ffcf0d80000 - 0x00007ffcf0dae000 	C:\WINDOWS\SYSTEM32\Wldp.dll
+0x00007ffcf3960000 - 0x00007ffcf3a0d000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ffcf21d0000 - 0x00007ffcf2225000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffcf1350000 - 0x00007ffcf136f000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x0000000180000000 - 0x0000000180058000 	C:\Users\markd\Downloads\com4j-20120426-2\com4j-amd64.dll
+0x00007ffcf2630000 - 0x00007ffcf275a000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffcf28d0000 - 0x00007ffcf299d000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffcef8e0000 - 0x00007ffcefac4000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffcf1520000 - 0x00007ffcf15a3000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+java_command: imapi2.Main
+java_class_path (initial): C:\Users\markd\Downloads\com4j-20120426-2\args4j-2.0.1.jar;C:\Users\markd\Downloads\com4j-20120426-2\com4j-2.2-SNAPSHOT.jar;C:\Users\markd\Downloads\com4j-20120426-2\tlbimp-2.2-SNAPSHOT.jar;C:\Users\markd\Downloads\com4j-20120426-2\samples\imapi2\build\classes;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-antlr.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-apache-bcel.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-apache-bsf.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-apache-log4j.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-apache-oro.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-apache-regexp.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-apache-resolver.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-apache-xalan2.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-commons-logging.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-commons-net.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-jai.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-javamail.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-jdepend.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-jmf.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-jsch.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-junit.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-junit4.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-junitlauncher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-netrexx.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\lib\ant\lib\ant-swing.jar;C:\Program Files\JetBrains\IntelliJ
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.13.8-hotspot
+PATH=C:\Program Files\Eclipse Adoptium\jdk-11.0.13.8-hotspot\bin;C:\Python39\Scripts\;C:\Python39\;c:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Oracle\VirtualBox;C:\Program Files\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\dotnet\;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Users\markd\AppData\Local\Microsoft\WindowsApps;C:\Users\markd\AppData\Local\GitHubDesktop\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\markd\AppData\Local\Microsoft\WindowsApps;C:\Users\markd\.dotnet\tools;C:\Users\markd\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\bin;
+USERNAME=markd
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1348)
+
+CPU:total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16562168k(3498204k free), swap 54310904k(21501396k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.312-b07) for windows-amd64 JRE (1.8.0_312-b07), built on Oct 19 2021 15:47:56 by "jenkins" with MS VC++ 12.0 (VS2013)
+
+time: Tue Nov 23 14:46:23 2021
+timezone: GMT Standard Time
+elapsed time: 0.205797 seconds (0d 0h 0m 0s)
+

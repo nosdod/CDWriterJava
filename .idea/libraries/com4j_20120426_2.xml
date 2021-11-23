@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="com4j-20120426-2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/com4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/com4j-src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/args4j-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/tlbimp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/tlbimp-src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

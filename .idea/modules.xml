@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/samples/powerPoint/build/build.iml" filepath="$PROJECT_DIR$/samples/powerPoint/build/build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/iTunes/build/build1.iml" filepath="$PROJECT_DIR$/samples/iTunes/build/build1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/wsh/build/build2.iml" filepath="$PROJECT_DIR$/samples/wsh/build/build2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/jnlp/build/build3.iml" filepath="$PROJECT_DIR$/samples/jnlp/build/build3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/wmi/build/build4.iml" filepath="$PROJECT_DIR$/samples/wmi/build/build4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/speech/build/build5.iml" filepath="$PROJECT_DIR$/samples/speech/build/build5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/excel/build/build6.iml" filepath="$PROJECT_DIR$/samples/excel/build/build6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/word/build/build7.iml" filepath="$PROJECT_DIR$/samples/word/build/build7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/com4j-20120426-2.iml" filepath="$PROJECT_DIR$/.idea/com4j-20120426-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/excel/excel.iml" filepath="$PROJECT_DIR$/samples/excel/excel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/iTunes/iTunes.iml" filepath="$PROJECT_DIR$/samples/iTunes/iTunes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/wmi/imap2.iml" filepath="$PROJECT_DIR$/samples/wmi/imap2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/jnlp/jnlp.iml" filepath="$PROJECT_DIR$/samples/jnlp/jnlp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/powerPoint/powerPoint.iml" filepath="$PROJECT_DIR$/samples/powerPoint/powerPoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/speech/speech.iml" filepath="$PROJECT_DIR$/samples/speech/speech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/word/word.iml" filepath="$PROJECT_DIR$/samples/word/word.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/wsh/wsh.iml" filepath="$PROJECT_DIR$/samples/wsh/wsh.iml" />
+    </modules>
+  </component>
+</project>

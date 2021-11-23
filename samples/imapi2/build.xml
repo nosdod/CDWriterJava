@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<project name="imapi2" default="run" basedir=".">
+  
+  <path id="com4j">
+    <fileset dir="../.." includes="*.jar"/>
+    <pathelement location="build/classes"/>
+    <pathelement path="${java.class.path}"/><!-- this line is just to allow the sample inside the workspace -->
+  </path>
+  
+  <taskdef resource="com4j/tlbimp/ant.properties">
+    <classpath refid="com4j" />
+  </taskdef>
+  
+  
+  <target name="tlbimp">
+    <mkdir dir="build/src"/>
+    <!-- compile IMAPI2 and IMAPI2FS type libraries -->
+    <tlbimp destdir="build/src" renameGetterAndSetters="true">
+      <lib libid="2735412F-7F64-5B0F-8F00-5D77AFBE261E" package="imapi2" />
+      <lib libid="2C941FD0-975B-59BE-A960-9A2A262853A5" package="imapi2fs" />
+    </tlbimp>
+  </target>
+  
+  <target name="compile" depends="">
+    <mkdir dir="build/classes"/>
+    <javac srcdir="interface/src" destdir="build/classes"
+           debug="on">
+      <classpath refid="com4j" />
+    </javac>
+    <javac srcdir="src" destdir="build/classes"
+           debug="on">
+      <classpath refid="com4j" />
+    </javac>
+  </target>
+  
+  <target name="run" depends="compile">
+    <java classname="imapi2.Main" fork="true">
+      <classpath>
+        <path refid="com4j"/>
+      </classpath>
+    </java>
+  </target>
+
+  <target name="debug" depends="compile">
+    <java classname="imapi2.Main" fork="true">
+      <classpath>
+        <path refid="com4j"/>
+      </classpath>
+    </java>
+  </target>
+
+  <target name="clean">
+    <delete dir="build"/>
+  </target>
+</project>
